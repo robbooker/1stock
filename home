@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Daily Stock Symbol</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .date {
+            color: #6c757d;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        .symbol {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 30px 0;
+            color: #2c3e50;
+            text-align: center;
+        }
+        .disclaimer {
+            font-size: 0.9em;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            margin-top: 30px;
+            padding-top: 20px;
+        }
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 20px;
+            }
+            .symbol {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="date">
+            <script>
+                document.write(new Date().toLocaleDateString('en-US', {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                }));
+            </script>
+        </div>
+        
+        <div class="symbol">
+            AAPL  <!-- Replace this with your daily stock symbol -->
+        </div>
+        
+        <div class="disclaimer">
+            Disclaimer: This information is provided for educational purposes only and 
+            should not be considered as financial advice. Always conduct your own 
+            research and consult with a qualified financial advisor before making any 
+            investment decisions.
+        </div>
+    </div>
+</body>
+</html>
