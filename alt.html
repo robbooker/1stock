@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Daily Stock Symbol</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=optional" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+                        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .date {
+            color: #64748b;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .symbol-container {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            margin: 20px 0;
+            border: 1px solid #e2e8f0;
+        }
+
+        .symbol-label {
+            color: #64748b;
+            font-size: 0.875em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .symbol {
+            font-size: 3.5em;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.02em;
+        }
+
+        .disclaimer {
+            font-size: 0.9em;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 30px;
+            padding-top: 20px;
+            text-align: left;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 24px;
+            }
+            
+            .symbol {
+                font-size: 2.5em;
+            }
+            
+            .symbol-container {
+                padding: 20px;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            }
+            
+            .container {
+                background: #1e293b;
+            }
+            
+            .symbol-container {
+                background: #0f172a;
+                border-color: #334155;
+            }
+            
+            .symbol {
+                color: #f8fafc;
+            }
+            
+            .date {
+                color: #94a3b8;
+            }
+            
+            .disclaimer {
+                color: #94a3b8;
+                border-color: #334155;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="date">
+            <script>
+                document.write(new Date().toLocaleDateString('en-US', {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                }));
+            </script>
+        </div>
+        
+        <div class="symbol-container">
+            <div class="symbol-label">ROB BOOKER'S #1 STOCK OF THE DAY</div>
+            <div class="symbol">
+                AAPL
+            </div>
+        </div>
+        
+        <div class="disclaimer">
+            Disclaimer: This information is provided for educational purposes only and 
+            should not be considered as financial advice. Always conduct your own 
+            research and consult with a qualified financial advisor before making any 
+            investment decisions.
+        </div>
+    </div>
+</body>
+</html>
